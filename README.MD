@@ -13,7 +13,7 @@
 ## INSTALLATION
 1. Клонируйте этот репозиторий или скопируйте файлы `freegpt.py` и `freegpt_db.py` в ваш проект:
     ```
-    git clone <repo_url>
+    git clone https://github.com/Butakov-Andrey/freegpt
     ```
 2. Убедитесь, что у вас установлен Python 3.9 или выше:
     ```
