@@ -1,0 +1,5 @@
+g4f[openai]
+g4f[api]
+g4f[image]
+aiosqlite==0.20.0
+loguru==0.7.2
