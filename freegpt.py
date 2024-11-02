@@ -223,4 +223,3 @@ class LLMManager:
         error_msg = "Все модели завершились с ошибкой:\n" + "\n".join(errors)
         logger.error(error_msg)
         raise AllModelsFailedException(error_msg)
-        raise AllModelsFailedException(error_msg)
