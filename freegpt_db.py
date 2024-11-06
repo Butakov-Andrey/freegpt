@@ -122,7 +122,7 @@ class MessageStore:
         try:
             async with aiosqlite.connect(self.db_path) as db:
                 db.row_factory = aiosqlite.Row
-                query = ["SELECT * FROM messages"]
+                query = ["SELECT role, content FROM messages"]
                 params = []
 
                 if dialog_id:

@@ -15,8 +15,8 @@ async def main():
         temperature=0.7,
         max_tokens=4000,
         model_routing=[
-            LLMModelEnum.CLAUDE_3_5_SONNET,
             LLMModelEnum.GPT_4O_MINI,
+            LLMModelEnum.CLAUDE_3_5_SONNET,
             LLMModelEnum.DEEPSEEK,
         ],
         timeout=20.0,
