@@ -149,8 +149,11 @@ class MessageStore:
     async def get_last_messages(
         self, limit: Optional[int] = None, dialog_id: Optional[str] = None
     ) -> List[Dict[str, Any]]:
-        """Получение последних сообщений (обратная совместимость)"""
-        return await self.get_messages(dialog_id=dialog_id, limit=limit, order="ASC")
+        """Получение последних сообщений в хронологическом порядке"""
+        messages = await self.get_messages(
+            dialog_id=dialog_id, limit=limit, order="DESC"
+        )
+        return list(reversed(messages))
 
     async def get_all_messages_iter(self) -> AsyncIterator[Dict[str, Any]]:
         """Получение всех сообщений построчно через асинхронный итератор"""
